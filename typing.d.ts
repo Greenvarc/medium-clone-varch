@@ -1,0 +1,35 @@
+export interface Post{
+    _id:string,
+    _createAt:string,
+    title:string,
+    author:{
+        name:string,
+        image:string
+    },
+    comments:Comment[]
+    desciption:string,
+    mainImage:{
+        asset:{
+            url:string
+        }
+    };
+    slug:{
+        current:string
+    };
+    body:[object]
+}
+export interface Comment{
+    approuved:boolean,
+    comment:string,
+    email:string,
+    name:string,
+    post:{
+        _ref:string,
+        _type:string,
+    }
+    _createdAt:string,
+    _id:string,
+    _type:string,
+    _rev:string,
+    updatedAt:string,
+}
